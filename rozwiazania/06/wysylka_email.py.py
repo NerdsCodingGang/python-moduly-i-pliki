@@ -5,7 +5,7 @@ import smtplib
 SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = 465                  
 MAIL_USER = "testingmagic123456@gmail.com"
-MAIL_PASSWORD = "blk....vjuf"
+MAIL_PASSWORD = "blk....avjuf"
 
 # tworzymy wiadomość
 msg = EmailMessage()

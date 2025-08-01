@@ -20,7 +20,7 @@ Załóż nową skrzynkę Gmail do ćwiczeń (np. `testingmagic123456@gmail.com`)
 > **OSTRZEŻENIE**
 >
 > Nie używaj głównego konta czy jego hasła do Gmaila w kodzie!
-{: .block-warning }
+{: .block-danger }
 
 
 **Dlaczego nowa skrzynka?**
@@ -75,7 +75,7 @@ SMTP_PORT=465
 
 > ##### **DLA CIEKAWYCH** 👀
 >
-> ### 📬 Co to jest host SMTP?
+> 📬 * Co to jest host SMTP?*
 > - **Host SMTP** to **adres serwera pocztowego**, który “odbiera” od nas wiadomości i wysyła je dalej.  
 > - To tak jak **adres biura pocztowego**:  
 >   - Gmail: `smtp.gmail.com`  
@@ -83,9 +83,8 @@ SMTP_PORT=465
 >   - Onet: `smtp.poczta.onet.pl`  
 > - Program (np. Python) musi wiedzieć, **gdzie wysłać nasz e-mail**, więc podajemy adres hosta.
 >
-> ---
 >
-> ### 🔌 Co to jest port?
+> 🔌 *Co to jest port?*
 > - **Port** to **numer “drzwi” w tym biurze pocztowym**, przez które program ma się połączyć.  
 > - Serwer poczty ma wiele “drzwi” (portów), ale dla wysyłki e-mail najczęściej używa się:  
 >   - `465` — połączenie **bezpieczne (SSL)**  
@@ -94,24 +93,25 @@ SMTP_PORT=465
 >
 > ---
 >
-> ### 📌 Przykład (dla Gmaila)
+> 📌 Przykład (dla Gmaila)
 > - **Host SMTP:** `smtp.gmail.com`  
 > - **Port:** `465` (SSL) lub `587` (TLS)  
-{: .block-tip }
 
 
-Zebrane dane możesz już uzupełnić bezpośrednio w swoim pliku np. `wysylka.py` 
+Zebrane dane możesz już uzupełnić bezpośrednio w swoim pliku np. `wysylka_email.py` 
 
 
 > **OSTRZEŻENIE**
 >
-> NIE NAZYWAJ PLIKU `email.py`
-> Tak nazywa się już moduł w pythonie, którego używasz. Impotujemy z modułu `email` obiekt `message` - patrz poniżej.
+> **Nie nazywaj pliku:** `email.py`
+> Tak nazywa się już moduł w pythonie, którego używasz. 
+> Impotujemy z modułu `email` obiekt `message` - patrz poniżej.
 {: .block-danger }
 
 
-```python
+Plik: `wysylka_email.py`: 
 
+```python
 import smtplib
 from email.message import EmailMessage
 
