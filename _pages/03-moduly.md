@@ -255,6 +255,8 @@ Wykorzystamy **API Narodowego Instytutu Dziedzictwa**:
 
 Dane zawierają listę zabytków UNESCO w Polsce w formacie JSON (np. `nazwa`, `wojewodztwo`, `miejscowosc`, `dataWpisu`).
 
+![]({{ site.baseurl }}/assets/malbork.jpg)
+
 
 
 **Utwórz moduł `unesco.py`** z funkcją:
