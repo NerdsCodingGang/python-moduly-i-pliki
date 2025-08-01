@@ -220,7 +220,7 @@ Na potrzeby ćwiczenia możemy skorzystać z pliku `zaklecia_statystyki.csv` (pr
 
 
 Skopiuj plik `zaklecia_statystyki.csv`
-```csv
+```
 Zaklęcie,Typ,Użycia
 Lumos,Światło,150
 Nox,Światło,85
@@ -255,21 +255,10 @@ Incendio,Ogień,59
 Aguamenti,Woda,37
 ```
 
-5. **(Opcjonalnie)** Za mało emocji? Przygotuj diagramy!
+
+### Za mało emocji? Przygotuj diagramy (Opcjonalnie)
 Dla wcześniej zebranych danych wyświetl
 
-1️⃣ **Wykres słupkowy – suma użyć według typu**
-- Pokazuje, które typy zaklęć są używane najczęściej. Przyda się w raporcie do pokazania dominujących kategorii.
-- Oś X: typ zaklęcia
-- Oś Y: suma użyć
-
-2️⃣ **Wykres kołowy - udział typów w łącznej liczbie użyć**
-Szybki podgląd: jaki procent wszystkich użyć to np. „Światło” vs „Obrona” itd.
-
-3️⃣ **Top 5 zaklęć - wykres słupkowy**
-Najczęściej używane konkretne zaklęcia (nie typy).
-- Oś X: nazwy zaklęć (top 5 po liczbie użyć)
-- Oś Y: liczba użyć
 
 > ##### 💡 TIP
 >
@@ -279,6 +268,7 @@ Najczęściej używane konkretne zaklęcia (nie typy).
 
 
 Zobacz przykład użycia 
+
 ```python
 import pandas as pd
 
@@ -295,6 +285,20 @@ df.plot(x="Zwierzę",
         kind="bar",
         title="Ulubione zwierzęta wśród uczniów")
 ```
+
+#### 1️⃣ **Wykres słupkowy – suma użyć według typu**
+- Pokazuje, które typy zaklęć są używane najczęściej. Przyda się w raporcie do pokazania dominujących kategorii.
+- Oś X: typ zaklęcia
+- Oś Y: suma użyć
+
+#### 2️⃣ **Wykres kołowy - udział typów w łącznej liczbie użyć**
+
+Jaki procent wszystkich użyć to np. „Światło” vs „Obrona” itd.
+
+#### 3️⃣ **Top 5 zaklęć - wykres słupkowy**
+Najczęściej używane konkretne zaklęcia (nie typy).
+- Oś X: nazwy zaklęć (top 5 po liczbie użyć)
+- Oś Y: liczba użyć
 
 ---
 
