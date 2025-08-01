@@ -8,7 +8,7 @@ Plik `.txt` odczytamy wbudowaną funkcją `open()`, ale pliki **CSV** czy **XLS*
 
 ---
 
-## 📂 Pliki CSV – co to właściwie jest?
+## Pliki CSV – co to właściwie jest?
 
 CSV (*Comma Separated Values*) to format danych, w którym kolejne wartości są oddzielone przecinkiem.  
 Plik CSV to tak naprawdę zwykły **plik tekstowy** – różni się tylko umową, że przecinki (czasem średniki) oddzielają kolumny.
@@ -21,7 +21,7 @@ Accio,Przywołanie przedmiotu
 Protego,Tarcza ochronna
 ```
 
-## 🔍 Odczyt CSV w Pythonie
+## Odczyt CSV w Pythonie
 
 W Pythonie do odczytu CSV możemy użyć zwykłego otwierania lub dedykowanego modułu **`csv`** (wbudowany, nie trzeba instalować).
 
@@ -39,8 +39,15 @@ with open("zaklecia.csv", "r", encoding="utf-8") as plik:
 > Pierwszy wiersz w pliku to zazwyczaj nagłówki kolumn.
 {: .block-tip }
 
-## ✍️ Zapis CSV w Pythonie
-Zapiszmy listę zaklęć i efektów do pliku CSV
+```
+['Zaklęcie', 'Efekt']
+['Lumos', 'Światło']
+['Accio', 'Przywołanie przedmiotu']
+['Protego', 'Tarcza ochronna']
+```
+
+## Zapis CSV w Pythonie
+Zapiszmy listę zaklęć i efektów do pliku CSV  ✍️
 
 ```python
 import csv
@@ -52,9 +59,10 @@ zaklecia = [
     ["Protego", "Tarcza ochronna"]
 ]
 
-with open("nowe_zaklecia.csv", "w", encoding="utf-8", newline="") as plik:
+with open("zaklecia_nowe.csv", "w", encoding="utf-8", newline="") as plik:
     zapis = csv.writer(plik)
     zapis.writerows(zaklecia)
+    print('✔ Zapisano!')
 ```
 
 ## 📊 Pliki XLS – Ah, ten Excel!
@@ -67,6 +75,11 @@ Pliki XLS/XLSX (Excel) już nie jest zwykły tekst, ale całkiem sporo dodatków
 - `xlrd` – do odczytu starych `.xls`
 -  ale też`pandas` - wygodny sposób do analizy danych
 
+Doinstalujmy biblioteki, które nam się przydadzą w dalszej części (możemy je wymienić po spacji).
+
+```bash
+pip install pandas openpyxl matplotlib
+```
 
 Utwórz dowolny plik `zaklecia.xlsx` (nie masz MS Excel? - Google Spreadsheets z zapisem do XLSX)
 
@@ -99,15 +112,16 @@ wb.save("zaklecia.xlsx")
 > pandas jest świetny do szybkiej analizy danych w Excelu (filtry, grupowanie, statystyki) i w większości projektów zastępuje bezpośrednie użycie openpyxl w analizie.
 {: .block-tip }
 
+### Pandas?
+
+![]({{ site.baseurl }}/assets/pandas.gif)
+
 
 `pandas` to bardzo popularna biblioteka do pracy z danymi tabelarycznymi.  
 Potrafi odczytać i zapisać pliki **XLSX** w kilka linijek kodu.
 
-Aby `pandas` mógł pracować z plikami Excela, potrzebny jest też silnik `openpyxl`:
+Aby `pandas` mógł pracować z plikami Excela, potrzebny jest też silnik `openpyxl`, gdyż pandas używa go podspodem.
 
-```bash
-pip install pandas openpyxl matplotlib
-```
 
 #### Jak odczytać dane za pomocą pandas? 
 
