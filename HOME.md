@@ -4,11 +4,9 @@ title: Witaj w ekipie Nerds Coding Gang!
 permalink: /
 ---
 
-Hej hej Gangu!  
+Witaj w Gangu! Python pełza z nami na salę – a my ruszamy na kolejny poziom tym razem: **obsługa plików i modułów w Pythonie** 🐍  
 
-Python pełza z nami na salę – a my ruszamy na kolejny poziom tym razem: **obsługa plików i modułów w Pythonie** 🐍  
-
-Cieszymy się, że dołączasz do tej przygody – i to od razu z językiem, który podbił świat.  
+Cieszymy się, że dołączasz do naszej ekipy i to od razu z językiem, który podbił świat.  
 Statystyki GitHuba [mówią same za siebie](http://githut.info/): Python jest wszędzie.  
 
 ---
