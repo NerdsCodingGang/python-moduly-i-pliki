@@ -129,7 +129,7 @@ print(f"Wylosowano: {liczba}")
 def przywitaj(imie):
     print(f"Cześć, {imie}!")
 
-przywitaj("Ania")
+przywitaj("Ania") # wywołanie funkcji
 przywitaj("Ola")
 ```
 
