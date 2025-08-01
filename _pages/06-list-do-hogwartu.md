@@ -97,6 +97,7 @@ SMTP_PORT=465
 > - **Host SMTP:** `smtp.gmail.com`  
 > - **Port:** `465` (SSL) lub `587` (TLS)  
 
+--- 
 
 Zebrane dane możesz już uzupełnić bezpośrednio w swoim pliku np. `wysylka_email.py` 
 
