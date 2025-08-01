@@ -67,7 +67,7 @@ print(req.text)
 - Sprawdź czy tekst ze strony zawiera też ciąg zadany przez użytkownika
 
 
-### 🔹 Zadanie 4 - pogodynka 🌤
+### 🔹 (dla chętnych) Zadanie 4 - pogodynka 🌤
 Strona OpenWeatherMap udostępnia różnego rodzaju informacje o pogodzie. Skorzystaj z dokumentacji [Current Weather](https://openweathermap.org/current). Przyjrzyj się jak zbudowany jest adres URL. 
 
 Pozwól użytkownikowi podać miasto oraz dwuliterowy kod kraju. Możesz ograniczyć miasta przez wybór kraju w prostym menu np.
