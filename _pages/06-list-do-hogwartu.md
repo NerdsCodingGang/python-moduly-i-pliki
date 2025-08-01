@@ -27,6 +27,7 @@ Załóż nową skrzynkę Gmail do ćwiczeń (np. `testingmagic123456@gmail.com`)
 - Będziemy generować hasło do aplikacji – lepiej nie robić tego na prywatnym koncie.
 - Unikamy wysyłania maili testowych przez korzystanie z waszej głównej skrzynki, w przypadku zablokowania przez Google.
 
+**3 kroki:**
 
 1. Włącz weryfikację dwuetapową (2FA) w ustawieniach Google.
 2. Otwórz Hasła aplikacji (np. „MyPythonApp”).
@@ -35,25 +36,33 @@ Załóż nową skrzynkę Gmail do ćwiczeń (np. `testingmagic123456@gmail.com`)
 
 ### Ustawienia konta Google zakładka bezpieczeństwo (security)
 
-Włączamy weryfikację 2 etapową (najszybciej za pomocą nr telefonu)
+Włączamy **weryfikację 2-etapową** (najszybciej za pomocą nr telefonu)
 ![]({{ site.baseurl }}/assets/2fa_1.png)
 
 
 ### Otwórz hasło aplikacji
 
-Wyszukaj hasła aplikacji app paswords
- → Aplikacja wpisujemy nazwę (np. „MyPythonApp”).
+Wyszukaj "hasła aplikacji" / "app paswords"
+
 ![]({{ site.baseurl }}/assets/2fa_2.png)
+
+ → Aplikacja wpisujemy wybraną nazwę (np. „MyPythonApp”)
+
 ![]({{ site.baseurl }}/assets/2fa_3.png)
+
+→ **Zatwierdź** "utwórz" / "create"
 
 ### Uzyskanie klucza 
 
 ![]({{ site.baseurl }}/assets/16key.png)
 
+Zapisz go, będzie Ci potrzebny, to Twój prywatny, sekretny klucz  🗝️
+ → Strzeż go dobrze!
+
 ## Przygotuj środowisko Pythona 🐍
 
 
-- potrzebne nam jeszcze moduły `smtplib` i `email` masz już w standardowej bibliotece Pythona
+- potrzebne nam jeszcze moduły `smtplib` i `email`, ale masz już w standardowej bibliotece Pythona
 
 Zbierz potrzebne dane
 
@@ -64,7 +73,43 @@ SMTP_HOST=smtp.gmail.com
 SMTP_PORT=465
 ```
 
-Możesz już je uzupełnić w swoim pliku w pythonie
+<div style="background-color:#f5f5f5; padding:20px; border-radius:8px;">
+
+## Dla Ciekawych
+
+### 📬 Co to jest host SMTP?
+- **Host SMTP** to **adres serwera pocztowego**, który “odbiera” od nas wiadomości i wysyła je dalej.  
+- To tak jak **adres biura pocztowego**:  
+  - Gmail ma swój adres pocztowy: `smtp.gmail.com`  
+  - Outlook ma swój: `smtp.office365.com`  
+  - Onet ma swój: `smtp.poczta.onet.pl`  
+- Program (np. Python) musi wiedzieć, **gdzie wysłać nasz e-mail**, więc podajemy adres hosta.
+
+---
+
+### 🔌 Co to jest port?
+- **Port** to **numer “drzwi” w tym biurze pocztowym**, przez które program ma się połączyć.  
+- Serwer poczty ma wiele “drzwi” (portów), ale dla wysyłki e-mail najczęściej używa się:  
+  - `465` — połączenie **bezpieczne (SSL)**  
+  - `587` — połączenie **bezpieczne (TLS)**  
+- To trochę jak numer okienka w urzędzie: port mówi, **którym wejściem wchodzimy**.
+
+---
+
+### 📌 Przykład (dla Gmaila)
+- **Host SMTP:** `smtp.gmail.com`  
+- **Port:** `465` (SSL) lub `587` (TLS)  
+</div>
+
+Zebrane dane możesz już uzupełnić bezpośrednio w swoim pliku np. `wysylka.py` 
+
+
+> **OSTRZEŻENIE**
+>
+> NIE NAZYWAJ PLIKU `email.py`
+> Tak nazywa się już moduł w pythonie, którego używasz. Impotujemy z modułu `email` obiekt `message` - patrz poniżej.
+{: .block-warning }
+
 
 ```python
 
@@ -72,8 +117,8 @@ import smtplib
 from email.message import EmailMessage
 
 #  KONFIGURACJA – UZUPEŁNIJ SAMODZIELNIE
-MAIL_USER = "testing_magic_13454353@gmail.com"   # ← twój adres
-MAIL_PASSWORD = "ab12cd34ef56gh78"               # ← 16-znakowy klucz aplikacji
+MAIL_USER = "testingmagic13454353@gmail.com"   # ← twój adres
+MAIL_PASSWORD = "ab12cd34ef56gh78"             # ← 16-znakowy klucz aplikacji
 SMTP_HOST = "smtp.gmail.com"
 SMTP_PORT = 465  # SSL
 
@@ -83,7 +128,7 @@ SMTP_PORT = 465  # SSL
 
 Wyślij na własną skrzynkę testową wiadomość:
 
-- Temat: My magical ME
+- Temat: My magical me
 - Treść: Tak magiczny email, że oczarował nawet mnie!
 
 ### 🤔 Co trzeba zrobić?
@@ -99,7 +144,8 @@ Wyślij na własną skrzynkę testową wiadomość:
 ### Podpowiedzi - krok po kroku **
 
 Utwórz obiek wiadomości, poszukaj jakie możliwości Ci daje  `EmailMessage()`
-```
+
+```python
 msg = EmailMessage()
 ```
 
@@ -117,6 +163,7 @@ with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT) as smtp_setup:
     smtp_setup.send_message(msg)
 
 print("✅ Mail wysłany — sprawdź skrzynkę (lub folder Spam).")
+
 ```
 
 | Linia | Co się dzieje? | Dlaczego tak? | Gdzie szukać więcej |
@@ -128,12 +175,40 @@ print("✅ Mail wysłany — sprawdź skrzynkę (lub folder Spam).")
 
 
 > TIP
+>
 > Jeśli zobaczysz błąd smtplib.SMTPAuthenticationError, upewnij się, że:
-> używasz klucza aplikacji, a nie zwykłego hasła,
-> konto ma włączone 2-etapowe logowanie,
-> podajesz poprawny port (465) i wykorzystujesz SMTP_SSL.
-{: .block-tip}
+> - używasz klucza aplikacji, a nie zwykłego hasła,
+> - konto ma włączone 2-etapowe logowanie,
+> - podajesz poprawny port (465) i wykorzystujesz SMTP_SSL.
+{: .block-danger }
 
+
+{% include solution.html title="Kliknij tu w ostateczności (rozwiązanie)" content="
+<pre><code class='language-python'>
+from email.message import EmailMessage
+import smtplib
+
+SMTP_HOST = 'smtp.example.com'
+SMTP_PORT = 465
+MAIL_USER = 'twojemail@example.com'
+MAIL_PASSWORD = 'twoj-sekretny-klucz'
+
+msg = EmailMessage()
+msg['Subject'] = 'My magical me'
+msg['From'] = MAIL_USER
+msg['To'] = MAIL_USER
+msg.set_content('Tak magiczny email, że oczarował nawet mnie!')
+
+with smtplib.SMTP_SSL(SMTP_HOST, SMTP_PORT) as smtp_setup:
+    smtp_setup.login(MAIL_USER, MAIL_PASSWORD)
+    smtp_setup.send_message(msg)
+
+print('✅ Mail wysłany — sprawdź skrzynkę (lub folder Spam).')
+</code></pre>
+" %}
+
+
+---
 
 ## List z Hogwartu ✉️
 
