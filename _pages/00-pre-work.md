@@ -33,7 +33,6 @@ print(type(wiek))  # <class 'str'>
 wiek = int(input("Podaj wiek: "))
 print(type(wiek))  # <class 'int'>
 
-wiek = int(input("Podaj wiek: "))
 wiek = float(wiek)  
 print(type(wiek))  # <class 'float'>
 ```
