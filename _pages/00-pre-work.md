@@ -85,7 +85,8 @@ else:
     print("Ocena 3 lub mniej")
 ```
 
-5) Pętla for
+### 5) Pętla for
+
 📌 `for` powtarza kod określoną liczbę razy lub dla elementów listy.
 `range()` liczy od zera.
 
