@@ -171,9 +171,6 @@
 
 .markdown-section blockquote {
     padding: 1em;
-    border: 1px solid #ddd;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
-    transition: box-shadow 0.2s ease;
     cursor: pointer;
 }
 
@@ -312,7 +309,7 @@
   color: inherit;
 }
 
-.bookmark-card a::before {
+.bookmark-card small::before {
   content: "🔗 ";
   margin-right: 0.3em;
 }
