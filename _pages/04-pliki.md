@@ -239,7 +239,6 @@ Już wiesz, że plik CSV to w rzeczywistości zwykły plik tekstowy, w którym d
 - Zapisz te dane do pliku `krotkie_zaklecia.csv` w formacie:  
 
 ```
-
 Lumos,Światło
 Accio,Przywołanie przedmiotu
 Protego,Tarcza ochronna
