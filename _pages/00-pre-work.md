@@ -143,6 +143,7 @@ def pieski(imie, liczba):
         print("🐶")
 
 pieski("Ania", 3)
+pieski("Ola", 5)
 ```
 
 ### 10) Funkcja z listą i losowaniem emoji
