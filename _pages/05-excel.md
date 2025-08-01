@@ -157,14 +157,19 @@ df.to_excel("nowe_zaklecia.xlsx", index=False)
 {: .block-tip }
 
 
-### Zadanie - MINIPROJEKT
+### Zadanie - MINIPROJEKT ✨🪄
+
+
+**Uwaga: 🤝 Łączymy się w pary lub trójki!**  
+
+💡 *Używamy głowy i dokumentacji, unikaj używania AI*
 
 Stwórz program, który analizuje dane z pliku CSV i generuje raport.  
-Na potrzeby ćwiczenia możemy skorzystać z pliku `zaklecia_statystyki.csv`.
+Na potrzeby ćwiczenia możemy skorzystać z pliku `zaklecia_statystyki.csv` (przykładowy plik poniżej).
 
 🎯 **Zakres**
 
-1. **Moduł `analiza_zaklec.py`**
+1. **`analiza_zaklec.py`**
    - Utwórz moduł zawierający funkcje:
      - `wczytaj_dane()` – wczytuje dane z pliku CSV.
      - `statystyki_podstawowe()` – liczy łączną liczbę użyć zaklęć, znajduje najczęściej używane zaklęcie, zlicza zaklęcia zakazane.
@@ -172,13 +177,19 @@ Na potrzeby ćwiczenia możemy skorzystać z pliku `zaklecia_statystyki.csv`.
      - *(Opcjonalnie)* `zapisz_raport()` – zapisuje wyniki do pliku CSV lub XLSX.
 
 
-> ##### TIP
+> ##### 💡 TIP
 >
 > Poznaj możliwości pandas'a. To biblioteka idealna do wielu zadań statystycznych.
 > Do obliczeń w `pandas` przyda się `groupby()` z `mean()` lub `sum()` oraz `max()` do wyszukania wartości największej.
 {: .block-tip }
 
-2. **Plik główny `main.py`**
+{% include bookmark.html 
+    url="https://pandas.pydata.org/docs/getting_started/intro_tutorials/index.html"
+    title="Pandas – Intro Tutorials"
+    desc="Oficjalne wprowadzenie do biblioteki Pandas: samouczki dla początkujących"
+%}
+
+2. **Plik główny projektu np. `main.py`**
    - Zaimportuj moduł `analiza_zaklec`.
    - Wczytaj dane z pliku `zaklecia_statystyki.csv`.
    - Wyświetl w konsoli raport wygenerowany przez funkcje modułu.
@@ -200,7 +211,7 @@ Na potrzeby ćwiczenia możemy skorzystać z pliku `zaklecia_statystyki.csv`.
 
 4. **(Opcjonalnie)** Zapis raportu do pliku `raport.csv` i / lub `raport.xslx`
 
-> ##### TIP
+> ##### 💡 TIP
 >
 > Plik CSV musi mieć nagłówki w pierwszym wierszu (np. `Zaklęcie,Typ,Użycia`).  
 > Upewnij się, że zapisujesz plik w kodowaniu **UTF‑8**, aby poprawnie wyświetlały się polskie znaki.
@@ -247,20 +258,20 @@ Aguamenti,Woda,37
 5. **(Opcjonalnie)** Za mało emocji? Przygotuj diagramy!
 Dla wcześniej zebranych danych wyświetl
 
-1️⃣ Wykres słupkowy – suma użyć według typu
+1️⃣ **Wykres słupkowy – suma użyć według typu**
 - Pokazuje, które typy zaklęć są używane najczęściej. Przyda się w raporcie do pokazania dominujących kategorii.
 - Oś X: typ zaklęcia
 - Oś Y: suma użyć
 
-2️⃣ Wykres kołowy - udział typów w łącznej liczbie użyć
+2️⃣ **Wykres kołowy - udział typów w łącznej liczbie użyć**
 Szybki podgląd: jaki procent wszystkich użyć to np. „Światło” vs „Obrona” itd.
 
-3️⃣ Top 5 zaklęć - wykres słupkowy
+3️⃣ **Top 5 zaklęć - wykres słupkowy**
 Najczęściej używane konkretne zaklęcia (nie typy).
 - Oś X: nazwy zaklęć (top 5 po liczbie użyć)
 - Oś Y: liczba użyć
 
-> ##### TIP
+> ##### 💡 TIP
 >
 > W `pandas` możesz łatwo stworzyć wykres przy pomocy `.plot(kind='name')` np. `.plot(kind='pie')`.  
 > Aby zapisać wykres do pliku, użyj `plt.savefig("wykres.png")`.
@@ -287,4 +298,4 @@ df.plot(x="Zwierzę",
 
 ---
 
-Hipjip hurra, czas na list z Hogwartu! 👉
+Hip hip hurra, czas na list z Hogwartu! 👉
