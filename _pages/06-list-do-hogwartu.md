@@ -174,7 +174,7 @@ print("✅ Mail wysłany — sprawdź skrzynkę (lub folder Spam).")
 
 
 
-> ##### TIP
+> ##### Błąd?
 >
 > Jeśli zobaczysz błąd smtplib.SMTPAuthenticationError, upewnij się, że:
 > - używasz klucza aplikacji, a nie zwykłego hasła,
