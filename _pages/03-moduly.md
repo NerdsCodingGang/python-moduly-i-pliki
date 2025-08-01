@@ -279,6 +279,7 @@ Do modułu dodaj funkcję `znajdz_nowsze(dane, rok)` – zwraca listę zabytków
    - jeśli nie ma takich zabytków, wyświetli komunikat `"Nie znaleziono zabytków UNESCO wpisanych po roku <rok>"`
 
 Dla chętnych: *Dodaj też opcję szukania starszych niż podana data*
+
 ---
 
 #### Filtrowanie po województwie 🗺️
