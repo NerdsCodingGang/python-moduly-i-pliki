@@ -275,7 +275,12 @@ Stwórz moduł `bezpieczne_pliki.py`, który zajmuje się jedynie **otwieraniem 
   - jeśli tak – **nie nadpisuje** pliku i zwraca komunikat o konflikcie pyta czy nadpisać plik przed zapisem,
 
 
-**W pliku `main.py`**:
+**W pliku głównym np. `zadanie_8.py`**:
 - zaimportuj moduł `bezpieczne_pliki`,
 - przetestuj funkcję odczytu i zapisu na wybranych plikach `.txt` i `.csv`.
 
+
+---
+
+Pliki txt, csv za nami, ale tak naprawdę, kto z nas z nimi na codzień pracuje? 
+Spróbujmy czegoś trudniejszego 👉

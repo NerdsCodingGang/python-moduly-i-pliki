@@ -270,3 +270,7 @@ df.plot(x="Zwierzę",
         kind="bar",
         title="Ulubione zwierzęta wśród uczniów")
 ```
+
+---
+
+Hipjip hurra, czas na list z Hogwartu! 👉

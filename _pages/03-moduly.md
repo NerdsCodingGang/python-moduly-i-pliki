@@ -347,3 +347,8 @@ if __name__ == "__main__":
     # filtrowanie po województwie
     # +analogicznie wczesniejszego
 ```
+
+---
+
+Moduły świetnie współgrają z pracą na plikach!
+W kolejnym rozdziale pobawimy się w otwieranie i zamykanie plików 👉

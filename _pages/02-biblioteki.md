@@ -82,3 +82,6 @@ Pokaż użytkownikowi krótkie zdanie o pogodzie oraz temperaturę w st. Celsjus
 *Uwaga: OpenWeather API może wymagać autoryzacji. Należy założyć darmowe konto i w miejsce appid podać swój klucz konta (`&APPID=your_key`)*
 
 
+---
+
+Czas na coś ciut trudniejszego  👉
