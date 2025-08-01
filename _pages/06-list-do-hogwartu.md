@@ -15,11 +15,12 @@ W tym zadaniu:
 
 ## Utwórz skrzynkę testową Gmail
 
-> WARNING
+> OSTRZEŻENIE
+>
 > Nie używaj głównego hasła do Gmaila w kodzie!
 {: .block-warning }
 
-Załóż nową skrzynkę Gmail do ćwiczeń (np. testing_magic_123456@gmail.com).
+Załóż nową skrzynkę Gmail do ćwiczeń (np. `testmagic123456@gmail.com`).
 
 Dlaczego nowa skrzynka?
 - Będziemy generować hasło do aplikacji – lepiej nie robić tego na prywatnym koncie.
