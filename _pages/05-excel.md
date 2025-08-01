@@ -285,7 +285,10 @@ df.plot(x="Zwierzę",
         title="Ulubione zwierzęta wśród uczniów")
 ```
 
-Dla wcześniej zebranych danych wyświetl
+Dla wcześniej zebranych danych wyświetl:
+- wykres słupkowy 
+- wykres kołowy
+- top 5 zaklęć
 
 #### 1️⃣ **Wykres słupkowy – suma użyć według typu**
 - Pokazuje, które typy zaklęć są używane najczęściej. Przyda się w raporcie do pokazania dominujących kategorii.
