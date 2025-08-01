@@ -8,13 +8,11 @@ Teraz zrobimy **własny moduł** – tak samo jak robią to twórcy bibliotek.
 Będziemy mogli go importować i używać w innych plikach.
 
 
-## 📂 Nasz pierwszy własny moduł – BMI
+** 📂 Nasz pierwszy własny moduł – BMI**
 
 Zaczniemy od prostego programu liczącego **BMI** na podstawie wzrostu i wagi.
 
 ---
-
-### 🔍 Najpierw w jednym pliku
 
 Załózmy, ze chcemy obliczć BMI, wzór znany nam dobrze z czasów szkolnych.
 
@@ -40,7 +38,7 @@ Ten kod działa, ale:
 
 To jest moment, w którym przenosimy logikę do modułu.
 
-### 🛠 Zamykamy logikę w funkcji
+## Zamykamy logikę w funkcji
 Funkcja pozwala nam policzyć BMI dla dowolnych danych wejściowych – bez pytania użytkownika.
 
 ```python
@@ -54,7 +52,7 @@ print("Twoje BMI wynosi:", oblicz_bmi(waga, wzrost))
 ```
 
 
-### 📌 `if __name__ == "__main__"` – a po co to?
+## A po co `if __name__ == "__main__"` ?
 
 W plikach Pythonowych, w programach zawodowych programistów pojawia się tajemnicze `__name__`. Jest to specjalna zmienna Pythona, która "wie", gdzie się znajduje właśnie wykonywany program. 
 
@@ -124,7 +122,7 @@ Cześć z modułu!
 - plik `main.py`, uruchomiony bezpośrednio, ma `__name__ = __main__`.
 
 
-### Rozwijamy skrypt BMI 
+## Rozwijamy skrypt BMI 
 Poprawmy nasz plik `skrypt.py` liczący BMI :
 
 ```python
@@ -139,7 +137,7 @@ if __name__ == "__main__": # to się uruchomi zaraz po uruchomieniu skryptu
 
 Teraz kiedy uruchomimy plik `skrypt.py` kod  wewnątrz ifa wykona się od razu.  
 
-### 📂 Tworzymy własny moduł
+## 📂 Tworzymy własny moduł
 
 Stwórz nowy plik bmi.py.
 
@@ -147,10 +145,13 @@ Przenieś tam funkcję `oblicz_bmi`:
 
 ```python
 def oblicz_bmi(waga, wzrost):
-    return waga / (wzrost ** 2)
+    wynik = waga / (wzrost ** 2)
+    return wynik
 ```
 
-### 📥 Import modułu w głównym pliku
+Słowo kluczowe `return` zwraca wartość wyniku, który obliczyliśmy.
+
+## 📥 Import modułu w głównym pliku
 W pliku `skrypt.py` możemy teraz zaimportować nasz moduł:
 
 ```python
@@ -165,20 +166,24 @@ if __name__ == "__main__":
 
 Brawo! 🎉 Właśnie stworzyliśmy i użyliśmy pierwszy własny moduł.
 
+Czas na trening
+
+## ZADANIA
+
 ### 🔹 Zadanie 1
 
-Stwórz moduł zaklecia.py z funkcją przywitaj(imie), która wyświetla komunikat:
+Stwórz moduł `zaklecia.py z` funkcją przywitaj(imie), która wyświetla komunikat:
 ```
 Witaj, {imie}! Twoja przygoda w Hogwarcie się zaczyna!
-W pliku głównym (main.py) zaimportuj moduł i przywitaj wybraną postać.
+W pliku głównym (np. `zadanie_1.py`) zaimportuj moduł i przywitaj wybraną postać.
 ```
 
 ### 🔹 Zadanie 2
 W lekcji rozgrzewkowej stworzyliśmy funkcję `filter_spells`, która oczyszcza tekst z zakazanych zaklęć.
 Czas przenieść ją do osobnego modułu by użyć w innych plikach.
 
-Możesz wykorzystać `zaklecia.py` i przenieś do niego funkcję `filter_spells`.
-W pliku głównym `main.py`:
+Możesz wykorzystać istniejący moduł `zaklecia.py` i przenieś do niego funkcję `filter_spells`.
+W pliku głównym `zadanie_2.py`:
 - zaimportuj moduł `zaklecia`,
 - utwórz listę przykładowych zdań `texts`
 - wywołaj `filter_spells` dla przykładowych tekstów z listy,
@@ -197,6 +202,8 @@ def odejmij_punkty(dom, liczba_punktow):
     ...
 ```
 
+Zaimportuj go w pliku głównym `zadanie_3.py` i użyj.
+
 Wyświetli komunikat:
 
 ```
@@ -210,13 +217,15 @@ Moduł „Sklep w Hogsmeade”
 
 Stwórz moduł **`sklep.py`**:
 
-- Utwórz zmienną `magazyn` - najlepiej słownik (wróć do lekcji o słownikach) nazwa produktu → cena
+- Utwórz zmienną `magazyn` - najlepiej słownik (np. poszukaj w Google jak wygląda słownik w Pythonie) nazwa produktu → cena
 ```python
 magazyn = {
     "Czekoladowa żaba": 10,
     "Maślane piwo": 7,
     "Pióro feniksa": 50
  }
+
+ print(magazyn["Czekoladowa żaba"])
 ```
 
 - Napisz funkcję `kup(produkt, galeony)`, która:
@@ -228,9 +237,15 @@ magazyn = {
   - jeśli produkt nie istnieje – zwraca komunikat:  
     `Taki produkt nie istnieje w sklepie.`
 
-W pliku **`zakupy.py`**:
+Funkcja `kup(produkt, galeony)` może od razy wyświetlać, albo faktycznie coś zwracać za pomocą słowa kluczowego `return`.
+
+W pliku **`zadanie_4.py`**:
 - zaimportuj moduł `sklep`,
 - przetestuj zakupy kilku produktów (np. „Czekoladowa żaba”, „Maślane piwo”).
+
+👉  Rozszerzenie
+Funkcja `kup()` to tylko komunikat — nie modyfikuje stanu magazynu. Jako dodatkowe zadanie: usuń produkt po zakupie.
+
 
 ### 🔹 Zadanie 5 
 
