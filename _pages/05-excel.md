@@ -258,8 +258,6 @@ Aguamenti,Woda,37
 
 
 ### Za mało emocji? Przygotuj diagramy (Opcjonalnie)
-Dla wcześniej zebranych danych wyświetl
-
 
 > ##### 💡 TIP
 >
@@ -286,6 +284,8 @@ df.plot(x="Zwierzę",
         kind="bar",
         title="Ulubione zwierzęta wśród uczniów")
 ```
+
+Dla wcześniej zebranych danych wyświetl
 
 #### 1️⃣ **Wykres słupkowy – suma użyć według typu**
 - Pokazuje, które typy zaklęć są używane najczęściej. Przyda się w raporcie do pokazania dominujących kategorii.
