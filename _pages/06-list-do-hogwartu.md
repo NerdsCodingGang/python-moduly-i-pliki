@@ -29,8 +29,17 @@ Załóż nową skrzynkę Gmail do ćwiczeń (np. `testingmagic123456@gmail.com`)
 
 
 1. Włącz weryfikację dwuetapową (2FA) w ustawieniach Google.
-2. Otwórz Hasła aplikacji → wybierz Poczta → Inne (np. „PythonApp”).
+2. Otwórz Hasła aplikacji (np. „MyPythonApp”).
 3. Zapisz wygenerowane 16-znakowe hasło — będzie Twoim kluczem SMTP.
+
+
+### Ustawienia konta Google zakładka bezpieczeństwo (security)
+![]({{ site.baseurl }}/assets/2fa_1.png)
+
+
+### Otwórz Hasła aplikacji → Aplikacja wpisujemy nazwę (np. „PythonApp”).
+![]({{ site.baseurl }}/assets/2fa_2.png)
+![]({{ site.baseurl }}/assets/2fa_3.png)
 
 
 ## Przygotuj środowisko Pythona 🐍
