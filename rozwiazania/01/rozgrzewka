@@ -1,0 +1,20 @@
+banned_spells = ["avada", "imperi", "crucio"]
+
+texts = [
+    "Zaklęcie niewybaczaln i śmiertelne to Avada Kedavra",
+    "W pojedynku magicznycm Crucio użyte na przeciwniku jest zakazane.",
+    "Pamiętaj, ze Alohomora otwiera, choć nie kazde drzwi.",
+    "W historii czarodziejów imperializm nie był tak powszechny jak u mugoli.",
+]
+
+# funkcja usuwa zakazane słowa (ignoruje wielkość liter)
+def filter_spells(text, banned):
+    new_text = text
+    for spell in banned:
+        new_text = new_text.replace(spell, "***").replace(spell.capitalize(), "***")
+    return new_text
+
+# główna pętla
+for t in texts:
+    clean = filter_spells(t, banned_spells)
+    print(clean)

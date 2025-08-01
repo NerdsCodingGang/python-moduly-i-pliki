@@ -24,7 +24,7 @@ Na początek — krótka rozgrzewka.
 
 **Filtr Księgi Zakazanych Zaklęć**. W bibliotece magicznej znajduje się Księga Zaklęć, w której pojawiły się *zakazane formuły*. Trzeba je usunąć, aby księga mogła trafić do uczniów.
 
-### Instrukcja:
+
 1. Napisz funkcję `filter_spells(text, banned)`, która:
    - przyjmuje tekst i listę zakazanych słów (`banned spells`),
    - usuwa zakazane zaklęcia z tekstu ( podpowiedź: ignorując wielkość liter),
