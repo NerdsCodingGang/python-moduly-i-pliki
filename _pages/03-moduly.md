@@ -206,7 +206,7 @@ Zaimportuj go w pliku głównym `zadanie_3.py` i użyj.
 
 Wyświetli komunikat:
 
-```
+```bash
 Dom Gryffindor otrzymuje 10 punktów!
 Dom Slytherin traci 5 punktów!
 ```
@@ -215,9 +215,10 @@ Dom Slytherin traci 5 punktów!
 
 Moduł „Sklep w Hogsmeade”
 
-Stwórz moduł **`sklep.py`**:
+Stwórz moduł **sklep.py**:
 
 - Utwórz zmienną `magazyn` - najlepiej słownik (np. poszukaj w Google jak wygląda słownik w Pythonie) nazwa produktu → cena
+
 ```python
 magazyn = {
     "Czekoladowa żaba": 10,
