@@ -159,10 +159,11 @@ df.to_excel("nowe_zaklecia.xlsx", index=False)
 
 ### Zadanie - MINIPROJEKT ✨🪄
 
+![]({{ site.baseurl }}/assets/abrakadabra.gif)
 
 **Uwaga: 🤝 Łączymy się w pary lub trójki!**  
 
-💡 *Używamy głowy i dokumentacji, unikaj używania AI*
+🚫🤖 *Używamy głowy i dokumentacji, unikaj używania AI*
 
 Stwórz program, który analizuje dane z pliku CSV i generuje raport.  
 Na potrzeby ćwiczenia możemy skorzystać z pliku `zaklecia_statystyki.csv` (przykładowy plik poniżej).
