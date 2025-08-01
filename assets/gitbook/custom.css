@@ -169,11 +169,6 @@
 
 /* Tips, warnings, and dangers */
 
-.markdown-section blockquote {
-    padding: 1em;
-    cursor: pointer;
-}
-
 .markdown-section blockquote.block-tip {
     border-color: var(--c-tip);
     background-color: var(--c-tip-bg);

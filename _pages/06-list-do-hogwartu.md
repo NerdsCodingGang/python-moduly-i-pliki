@@ -17,7 +17,7 @@ W tym zadaniu:
 
 Załóż nową skrzynkę Gmail do ćwiczeń (np. `testingmagic123456@gmail.com`).
 
-> **OSTRZEŻENIE**
+> ##### OSTRZEŻENIE
 >
 > Nie używaj głównego konta czy jego hasła do Gmaila w kodzie!
 {: .block-danger }
@@ -102,7 +102,7 @@ SMTP_PORT=465
 Zebrane dane możesz już uzupełnić bezpośrednio w swoim pliku np. `wysylka_email.py` 
 
 
-> **OSTRZEŻENIE**
+> ##### OSTRZEŻENIE
 >
 > **Nie nazywaj pliku:** `email.py`
 > Tak nazywa się już moduł w pythonie, którego używasz. 
@@ -174,7 +174,7 @@ print("✅ Mail wysłany — sprawdź skrzynkę (lub folder Spam).")
 
 
 
-> **TIP**
+> ##### TIP
 >
 > Jeśli zobaczysz błąd smtplib.SMTPAuthenticationError, upewnij się, że:
 > - używasz klucza aplikacji, a nie zwykłego hasła,
