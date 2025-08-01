@@ -34,13 +34,21 @@ Załóż nową skrzynkę Gmail do ćwiczeń (np. `testingmagic123456@gmail.com`)
 
 
 ### Ustawienia konta Google zakładka bezpieczeństwo (security)
+
+Włączamy weryfikację 2 etapową (najszybciej za pomocą nr telefonu)
 ![]({{ site.baseurl }}/assets/2fa_1.png)
 
 
-### Otwórz Hasła aplikacji → Aplikacja wpisujemy nazwę (np. „PythonApp”).
+### Otwórz hasło aplikacji
+
+Wyszukaj hasła aplikacji app paswords
+ → Aplikacja wpisujemy nazwę (np. „MyPythonApp”).
 ![]({{ site.baseurl }}/assets/2fa_2.png)
 ![]({{ site.baseurl }}/assets/2fa_3.png)
 
+### Uzyskanie klucza 
+
+![]({{ site.baseurl }}/assets/16key.png)
 
 ## Przygotuj środowisko Pythona 🐍
 
