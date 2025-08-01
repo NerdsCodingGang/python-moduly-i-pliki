@@ -73,33 +73,32 @@ SMTP_HOST=smtp.gmail.com
 SMTP_PORT=465
 ```
 
-<div style="background-color:#f5f5f5; padding:20px; border-radius:8px;">
+> ##### **DLA CIEKAWYCH** 👀
+>
+> ### 📬 Co to jest host SMTP?
+> - **Host SMTP** to **adres serwera pocztowego**, który “odbiera” od nas wiadomości i wysyła je dalej.  
+> - To tak jak **adres biura pocztowego**:  
+>   - Gmail: `smtp.gmail.com`  
+>   - Outlook: `smtp.office365.com`  
+>   - Onet: `smtp.poczta.onet.pl`  
+> - Program (np. Python) musi wiedzieć, **gdzie wysłać nasz e-mail**, więc podajemy adres hosta.
+>
+> ---
+>
+> ### 🔌 Co to jest port?
+> - **Port** to **numer “drzwi” w tym biurze pocztowym**, przez które program ma się połączyć.  
+> - Serwer poczty ma wiele “drzwi” (portów), ale dla wysyłki e-mail najczęściej używa się:  
+>   - `465` — połączenie **bezpieczne (SSL)**  
+>   - `587` — połączenie **bezpieczne (TLS)**  
+> - To trochę jak numer okienka w urzędzie: port mówi, **którym wejściem wchodzimy**.
+>
+> ---
+>
+> ### 📌 Przykład (dla Gmaila)
+> - **Host SMTP:** `smtp.gmail.com`  
+> - **Port:** `465` (SSL) lub `587` (TLS)  
+{: .block-tip }
 
-## Dla Ciekawych
-
-### 📬 Co to jest host SMTP?
-- **Host SMTP** to **adres serwera pocztowego**, który “odbiera” od nas wiadomości i wysyła je dalej.  
-- To tak jak **adres biura pocztowego**:  
-  - Gmail ma swój adres pocztowy: `smtp.gmail.com`  
-  - Outlook ma swój: `smtp.office365.com`  
-  - Onet ma swój: `smtp.poczta.onet.pl`  
-- Program (np. Python) musi wiedzieć, **gdzie wysłać nasz e-mail**, więc podajemy adres hosta.
-
----
-
-### 🔌 Co to jest port?
-- **Port** to **numer “drzwi” w tym biurze pocztowym**, przez które program ma się połączyć.  
-- Serwer poczty ma wiele “drzwi” (portów), ale dla wysyłki e-mail najczęściej używa się:  
-  - `465` — połączenie **bezpieczne (SSL)**  
-  - `587` — połączenie **bezpieczne (TLS)**  
-- To trochę jak numer okienka w urzędzie: port mówi, **którym wejściem wchodzimy**.
-
----
-
-### 📌 Przykład (dla Gmaila)
-- **Host SMTP:** `smtp.gmail.com`  
-- **Port:** `465` (SSL) lub `587` (TLS)  
-</div>
 
 Zebrane dane możesz już uzupełnić bezpośrednio w swoim pliku np. `wysylka.py` 
 
@@ -108,7 +107,7 @@ Zebrane dane możesz już uzupełnić bezpośrednio w swoim pliku np. `wysylka.p
 >
 > NIE NAZYWAJ PLIKU `email.py`
 > Tak nazywa się już moduł w pythonie, którego używasz. Impotujemy z modułu `email` obiekt `message` - patrz poniżej.
-{: .block-warning }
+{: .block-danger }
 
 
 ```python
@@ -141,7 +140,7 @@ Wyślij na własną skrzynkę testową wiadomość:
   *(lub użyj `with`, wtedy sesja zamknie się automatycznie)*.
 
 
-### Podpowiedzi - krok po kroku **
+### Podpowiedzi - krok po kroku
 
 Utwórz obiek wiadomości, poszukaj jakie możliwości Ci daje  `EmailMessage()`
 
@@ -174,7 +173,7 @@ print("✅ Mail wysłany — sprawdź skrzynkę (lub folder Spam).")
 
 
 
-> TIP
+> **TIP**
 >
 > Jeśli zobaczysz błąd smtplib.SMTPAuthenticationError, upewnij się, że:
 > - używasz klucza aplikacji, a nie zwykłego hasła,
@@ -247,7 +246,11 @@ Dyrekcja Hogwartu
 
 Po wysyłce wypisz w konsoli np. `Wysłano do: Harry <harry@example.com>`.
 
-> ##### TIP
+> ##### **TIP**
 >
 > W pętli `for` przypomnisz sobie `enumerate()` lub klasyczne iterowanie list.
 {: .block-tip }
+
+
+👉  Niedosyt? Pomyśl co możesz zrobić z dzisiaj nabytą wiedzą!
+
