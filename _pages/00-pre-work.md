@@ -171,17 +171,19 @@ Napisz funkcję `remove_allergens(text, ingredients)`, która:
 
 Stwórz listę kilku przepisów (każdy jako string)
 
-```
+```python
 przepisy = [
     "Ciasto z jajkami i mlekiem",
-    "Sałatka z orzechami i pomidorem",
-    "Makaron z glutenem i sosem pomidorowym"
+    "Sałatka z pomidorem i orzechami włoskimi",
+    "Makaron z glutenem i sosem pomidorowym",
+    "Orzechowy ramen"
 ]
 
 ```
 
 Użyj pętli, aby przefiltrować wszystkie przepisy i wyświetlić wersje bez alergenów
 
+![]({{ site.baseurl }}/assets/food.gif)
 
 Przykład rozwiązania:
 
