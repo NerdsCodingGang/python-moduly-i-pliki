@@ -11,7 +11,6 @@ To przydatne, gdy chcemy przechowywać dane między uruchomieniami programu – 
 
 ---
 
-## 📂 Otwieramy pierwszy plik `.txt`
 
 Zacznijmy od prostego pliku tekstowego.  
 
@@ -27,7 +26,7 @@ Expelliarmus
 Dodaj więcej zakleć jeśli masz ochotę 
 
 
-### Otwieranie pliku w Pythonie
+## 📂 Otwieramy pierwszy plik `.txt`
 
 Python ma wbudowaną funkcję **`open()`**, która służy do pracy z plikami.  
 
@@ -40,12 +39,17 @@ plik.close()                  # zamykamy plik
 
 *Otwarcie <-> zamknięcie ... i zawsze trzeba o tym pamiętać! Spokojnie programiści są leniwi i wymyślili lepszy sposób (ale o tym za chwilę)*
 
-### Tryby otwierania pliku
-Dlaczego użyłam `r` ? Parametr **"r"** w `open()` oznacza nic innego niż **tryb odczytu** czyli angielskie read. 
+## Tryby otwierania pliku
+
+Dlaczego użyłam `r` ?
+
+Parametr **"r"** w `open()` oznacza nic innego niż **tryb odczytu** czyli angielskie read. 
 Odczyt jest domyślnym stanem, więc mogliśmy też otworzyć za pomocą `plik = open("zaklecia.txt")`
 
+**Ciekawostka:** Zobacz co zawiera teraz sama zmienna `plik` -> `print(plik)`.
 
-### Słowo kluczowe `with`
+
+## Słowo kluczowe `with`
 
 Jak wspomniałam programiści są dość leniwi ;) 
 
@@ -62,15 +66,16 @@ print(zawartosc_zaklecia)
 - `zawartosc_zaklecia` - zmienna, w której odczytana została zawartość pliku jako tekst
 - `utf-8` - kodowanie znaków
 
+
 > TIP
 > encoding="utf-8" dodajemy prawie zawsze – zapewnia poprawne wyświetlanie znaków lokalnych, to po prostu dodatkowe zabezpieczenie.
 {: .block-tip }
 
-### Odczyt linia po linii 
+## Odczyt linia po linii 
 
 Czasami chcemy pracować z każdą linią osobno – np. gdy każda linia to inne zaklęcie.
 
-W Pythonie wygodnie zrobimy to funkcją `readlines()`, która zwraca listę linii:
+W Pythonie wygodnie zrobimy to funkcją `.readlines()`, która zwraca listę linii:
 
 ```python
 with open("zaklecia.txt", "r", encoding="utf-8") as fp:
@@ -81,6 +86,7 @@ for zaklecie in linie:
 ```
 
 ### 🔹 Zadanie 1
+
 `readlines()` daje od razu listę, którą możemy modyfikować, filtrować i przekazywać do innych funkcji - bardzo wygodna sprawa :D
 
 Utwórz plik `domy.txt` zawiera nazwy domów w Hogwarcie (po jednym w każdej linii)
@@ -224,14 +230,14 @@ else:
 ```
 
 
-### 🔹 Zadanie 1
+### 🔹 Zadanie 5
 
 - Zaimportuj moduł `random`.
 - Wylosuj liczbę od 1 do 100.
 - Zapisz do pliku `.txt` (nazwa pliku podana przez użytkownika) tyle znaków `❤︎` ile wynosi wylosowana liczba.
 
 
-### 🔹 Zadanie 2 
+### 🔹 Zadanie 6 
 
 Już wiesz, że plik CSV to w rzeczywistości zwykły plik tekstowy, w którym dane są oddzielone przecinkami.  
 
@@ -246,14 +252,14 @@ Protego,Tarcza ochronna
 
 - Pamiętaj o dodaniu nagłówka (pierwsza linia w CSV opisuje kolumny) `Zaklęcie,Efekt`
 
-### 🔹 Zadanie 3 
+### 🔹 Zadanie 7 
 
-- Zaimportuj moduł `zaklecia` (funkcja `filter_spells`).
+- Zaimportuj moduł `zaklecia` (funkcja `filter_spells`) z poprzedniej sekcji
 - Wczytaj zaklęcia z pliku `ksiega_zaklec.csv`.
 - Przefiltruj zaklęcia przez `filter_spells`.
 - Zapisz oczyszczone zaklęcia do nowego pliku `bezpieczne_zaklecia.csv`.
 
-## 🔹 Zadanie 4
+### 🔹 Zadanie 8
 
 Stwórz moduł `bezpieczne_pliki.py`, który zajmuje się jedynie **otwieraniem plików** w bezpieczny sposób.
 
