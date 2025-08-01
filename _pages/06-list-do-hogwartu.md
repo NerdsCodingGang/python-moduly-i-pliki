@@ -235,7 +235,7 @@ Z magicznymi pozdrowieniami,
 Dyrekcja Hogwartu
 ```
 
-🤔 **Co trzeba zrobić?**
+### 🤔 Co trzeba zrobić?
 
 - Odczytaj `stolik.csv` — użyj dowolnej poznanej metody.  
 - Dla każdej osoby:  
