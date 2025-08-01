@@ -130,7 +130,7 @@ Plik `wpisy.txt` zawiera daty wpisów na listę magicznych wydarzeń (każda dat
 
 > ##### TIP
 >
-> Użyj odpowiednich funkcji do poszukiwania wartości na liście
+> Użyj odpowiednich funkcji do poszukiwania najstarszego i najnowszego roku jako wartości na liście
 {: .block-tip }
 
 ### 🔹 Zadanie 3

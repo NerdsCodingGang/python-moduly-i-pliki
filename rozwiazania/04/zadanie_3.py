@@ -1,7 +1,7 @@
 with open("wpisy.csv", "r", encoding="utf-8") as plik:
     zawartosc = plik.readlines()
 
-wydarzenia = []   # lista krotek (nazwa, rok)
+wydarzenia = []   # lista list  [rok, nazwa wydarzenia]
 lata = []         # lista lat
 
 for linia in zawartosc:
@@ -9,13 +9,13 @@ for linia in zawartosc:
         czesci = linia.strip().split(",")
         nazwa = czesci[0]
         rok = int(czesci[1])
-        wydarzenia.append([nazwa, rok])
+        wydarzenia.append([rok, nazwa])
         lata.append(rok)
 
 najstarszy = min(lata)
 najnowszy = max(lata)
 
-for nazwa, rok in wydarzenia:
+for rok, nazwa in wydarzenia:
     if rok == najstarszy:
         print(f"Najstarszy: {rok} r. {nazwa}")
     if rok == najnowszy:
