@@ -257,7 +257,7 @@ Aguamenti,Woda,37
 ```
 
 
-### Za mało emocji? Przygotuj diagramy (Opcjonalnie)
+### Za mało emocji? Przygotuj diagramy (rozszerzenie)
 
 > ##### 💡 TIP
 >
