@@ -42,20 +42,19 @@ print(type(wiek))  # <class 'float'>
 - `float("20.15")`  - zrzutuje tekst "20" na liczbę float
 
 ### 3) Stringi i f‑string + operacje na stringach
-📌 String (str) to tekst w cudzysłowie lub apostrofach.
+📌 String (`str`) to tekst w cudzysłowie lub apostrofach.
 
-f‑string – wstawianie zmiennych do tekstu
-python
-Kopiuj
-Edytuj
+- f‑string – wstawianie zmiennych do tekstu
+
+```python
 imie = "Ania"
 wiek = 18
 print(f"{imie} ma {wiek} lat")           # Ania ma 18 lat
 print(f"Za rok będzie mieć {wiek + 1}")  # Za rok będzie mieć 19
+```
+
 Operacje na stringach
-python
-Kopiuj
-Edytuj
+```python
 tekst = "Python jest SUPER"
 
 print(tekst.lower())    # python jest super
@@ -65,20 +64,18 @@ print(tekst.replace("SUPER", "fajny"))  # Python jest fajny
 # Sprawdzenie czy coś jest w tekście
 print("Python" in tekst)    # True
 print("Java" in tekst)      # False
-📌 Wniosek:
+```
 
-.lower() / .upper() zmieniają wielkość liter
+📌 **Warto wiedzi:**
 
-.replace(a, b) zamienia tekst a na b
+- `.lower()` / `.upper()` - zmieniają wielkość liter
+- `.replace(a, b)` zamienia tekst a na b
+- `"coś" in tekst` sprawdza, czy w tekście występuje dane słowo
 
-"coś" in tekst sprawdza, czy w tekście występuje dane słowo
+### 4) Instrukcje warunkowe
+📌 `if` sprawdza warunek, `elif` kolejne, `else` na końcu.
 
-4) Instrukcje warunkowe
-📌 if sprawdza warunek, elif kolejne, else na końcu.
-
-python
-Kopiuj
-Edytuj
+```python
 punkty = int(input("Podaj punkty: "))
 
 if punkty >= 90:
@@ -87,71 +84,71 @@ elif punkty >= 70:
     print("Ocena 4")
 else:
     print("Ocena 3 lub mniej")
-5) Pętla for
-📌 for powtarza kod określoną liczbę razy lub dla elementów listy.
-range() liczy od zera.
+```
 
-python
-Kopiuj
-Edytuj
+5) Pętla for
+📌 `for` powtarza kod określoną liczbę razy lub dla elementów listy.
+`range()` liczy od zera.
+
+```python
 for i in range(5):
     print(i)  # 0,1,2,3,4
 
 owoce = ["jabłko", "banan", "gruszka"]
 for owoc in owoce:
     print(owoc)
-6) Pętla while
-📌 while działa tak długo, jak warunek jest True.
+```
 
-python
-Kopiuj
-Edytuj
+### 6) Pętla while
+📌 `while` działa tak długo, jak warunek jest `True`.
+
+```python
 while True:
     liczba = int(input("Podaj liczbę (0 aby zakończyć): "))
     if liczba == 0:
         break
     print(f"Podałeś: {liczba}")
 
-print("Koniec programu")
-7) Moduł random
-📌 random.randint(a, b) losuje liczbę od a do b.
+print("Koniec programu, pa pa")
+```
 
-python
-Kopiuj
-Edytuj
+### 7) Moduł random
+📌 `random.randint(a, b)` losuje liczbę od a do b.
+
+```python
 import random
 
 liczba = random.randint(1, 10)
 print(f"Wylosowano: {liczba}")
-8) Funkcje
+```
+
+### 8) Funkcje
 📌 Funkcje przyjmują parametry i mogą działać na różnych danych.
 
-python
-Kopiuj
-Edytuj
+```python
 def przywitaj(imie):
     print(f"Cześć, {imie}!")
 
 przywitaj("Ania")
 przywitaj("Ola")
-9) Funkcja z parametrami i pętlą
+```
+
+### 9) Funkcja z parametrami i pętlą
 📌 Parametry pozwalają ustawić wartości, pętla powtarza czynność.
 
-python
-Kopiuj
-Edytuj
+```python
 def pieski(imie, liczba):
     print(f"{imie} ma urocze pieski:")
     for i in range(liczba):
         print("🐶")
 
 pieski("Ania", 3)
-10) Funkcja z listą i losowaniem emoji
-📌 random.choice() losuje element z listy.
+```
 
-python
-Kopiuj
-Edytuj
+### 10) Funkcja z listą i losowaniem emoji
+📌 `random.choice()` losuje element z listy.
+
+```python
 import random
 
 def przydziel_emoji(lista_imion):
@@ -161,28 +158,34 @@ def przydziel_emoji(lista_imion):
         print(f"{imie} dostaje {emoji_wylosowane}")
 
 przydziel_emoji(["Ania", "Ola", "Kasia"])
-Zadanie: „Przepis bez alergenów”
-📌 Czas na połączenie wszystkiego: stringi, pętle, funkcje.
+```
 
-Zadanie:
+### 📌 Zadanie: „Przepis bez alergenów”
 
-Napisz funkcję remove_allergens(text, ingredients), która:
+Czas na połączenie wszystkiego: stringi, pętle, funkcje.
 
-przyjmuje opis przepisu (text) oraz listę alergenów (ingredients)
-
-usuwa alergeny z tekstu (ignorując wielkość liter)
-
-zwraca nową, „bezpieczną” wersję przepisu
+Napisz funkcję `remove_allergens(text, ingredients)`, która:
+- przyjmuje opis przepisu (text) oraz listę alergenów (ingredients)
+- usuwa alergeny z tekstu (ignorując wielkość liter)
+- zwraca nową, „bezpieczną” wersję przepisu
 
 Stwórz listę kilku przepisów (każdy jako string)
 
+```
+przepisy = [
+    "Ciasto z jajkami i mlekiem",
+    "Sałatka z orzechami i pomidorem",
+    "Makaron z glutenem i sosem pomidorowym"
+]
+
+```
+
 Użyj pętli, aby przefiltrować wszystkie przepisy i wyświetlić wersje bez alergenów
 
-Przykład:
 
-python
-Kopiuj
-Edytuj
+Przykład rozwiązania:
+
+```python
 def remove_allergens(text, ingredients):
     text_lower = text.lower()
     for alergen in ingredients:
@@ -199,11 +202,13 @@ alergeny = ["jajka", "mleko", "orzechy", "gluten"]
 
 for przepis in przepisy:
     print(remove_allergens(przepis, alergeny))
+
+```
+
 ✅ Przykładowy wynik:
 
-css
-Kopiuj
-Edytuj
+```
 ciasto z [usunięto] i [usunięto]
 sałatka z [usunięto] i pomidorem
 makaron z [usunięto] i sosem pomidorowym
+```
