@@ -178,12 +178,15 @@ Witaj, {imie}! Twoja przygoda w Hogwarcie się zaczyna!
 ```
 W pliku głównym (np. `zadanie_1.py`) zaimportuj moduł i korzystaj z funkcji która jest w `zaklecia.py`.
 
+Pamiętaj, uzyj `if __name__ == "__main__":` 
+
 
 ### 🔹 Zadanie 2
 W lekcji rozgrzewkowej stworzyliśmy funkcję `filter_spells`, która oczyszcza tekst z zakazanych zaklęć.
 Czas przenieść ją do osobnego modułu by użyć w innych plikach.
 
 Możesz wykorzystać istniejący moduł `zaklecia.py` i przenieś do niego funkcję `filter_spells`.
+
 W pliku głównym `zadanie_2.py`:
 - zaimportuj moduł `zaklecia`,
 - utwórz listę przykładowych zdań `texts`
