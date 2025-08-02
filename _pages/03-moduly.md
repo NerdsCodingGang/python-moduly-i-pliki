@@ -52,20 +52,20 @@ print("Twoje BMI wynosi:", oblicz_bmi(waga, wzrost))
 ```
 
 
-## A po co `if __name__ == "__main__"` ?
+> ##### A po co `if __name__ == "__main__"` ?
+>
+>W plikach Pythonowych, w programach zawodowych programistów pojawia się tajemnicze `__name__`. 
+>Jest to specjalna zmienna Pythona, która "wie", gdzie się znajduje właśnie wykonywany program. 
+>
+>- Jeśli plik uruchamiany jest bezpośrednio – `__name__` ma wartość `"__main__"`.
+>- Jeśli plik jest importowany jako moduł – `__name__` ma wartość `nazwa pliku`.
+>
+> Dzięki temu możemy rozdzielić:
+>
+> - kod, który ma się wykonać przy uruchomieniu po prostu pliku,
+> - a kod, który ma być dostępny tylko po imporcie modułu w pliku
 
-W plikach Pythonowych, w programach zawodowych programistów pojawia się tajemnicze `__name__`. Jest to specjalna zmienna Pythona, która "wie", gdzie się znajduje właśnie wykonywany program. 
-
-
-- Jeśli plik uruchamiany jest bezpośrednio – `__name__` ma wartość `"__main__"`.
-- Jeśli plik jest importowany jako moduł – `__name__` ma wartość `nazwa pliku`.
-
-Dzięki temu możemy rozdzielić:
-
-- kod, który ma się wykonać przy uruchomieniu po prostu pliku,
-- a kod, który ma być dostępny tylko po imporcie modułu w pliku
-
-#### Nie wierzysz? Sprawdź to 
+##### Nie wierzysz? Sprawdź to 
 
 Utwórz plik: `modul_testowy.py`
 
