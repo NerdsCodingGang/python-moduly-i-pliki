@@ -172,11 +172,12 @@ Czas na trening
 
 ### 🔹 Zadanie 1
 
-Stwórz moduł `zaklecia.py z` funkcją przywitaj(imie), która wyświetla komunikat:
+Stwórz moduł `zaklecia.py` z funkcją przywitaj(imie), która wyświetla komunikat:
 ```
 Witaj, {imie}! Twoja przygoda w Hogwarcie się zaczyna!
-W pliku głównym (np. `zadanie_1.py`) zaimportuj moduł i przywitaj wybraną postać.
 ```
+W pliku głównym (np. `zadanie_1.py`) zaimportuj moduł i przywitaj wybraną postać.
+
 
 ### 🔹 Zadanie 2
 W lekcji rozgrzewkowej stworzyliśmy funkcję `filter_spells`, która oczyszcza tekst z zakazanych zaklęć.
