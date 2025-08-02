@@ -172,11 +172,11 @@ Czas na trening
 
 ### 🔹 Zadanie 1
 
-Stwórz moduł `zaklecia.py` z funkcją przywitaj(imie), która wyświetla komunikat:
+Stwórz moduł `zaklecia.py` z funkcją `def przywitaj(imie)`, która wyświetla komunikat:
 ```
 Witaj, {imie}! Twoja przygoda w Hogwarcie się zaczyna!
 ```
-W pliku głównym (np. `zadanie_1.py`) zaimportuj moduł i przywitaj wybraną postać.
+W pliku głównym (np. `zadanie_1.py`) zaimportuj moduł i korzystaj z funkcji która jest w `zaklecia.py`.
 
 
 ### 🔹 Zadanie 2
