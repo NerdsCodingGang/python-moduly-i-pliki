@@ -247,10 +247,40 @@ Dyrekcja Hogwartu
 
 Po wysyłce wypisz w konsoli np. `Wysłano do: Harry <harry@example.com>`.
 
+#### REFAKTOR
+
+Przepisać rozwiązanie tak, by uzywać wszystkiego co do tej pory umiemy na przykład:
+
+- kod był podzielony na funkcje o nazwach mówiących, co robią (czasowniki: `read_people`, `read/render_template`, `build_email`, `main`),
+- warto podzielić kod na moduły (wprowadź chociaż 1 moduł np. czytanie pliku - reuzyjesz go dla ludzi jak i czytania szablonu)
+- pamiętaj by użyć `if __name__ == "__main__":` do uruchamiania programu
+
+
+### Rozszerzenie 
+
+Utwórz nowy plik z listą książek 
+
+```
+Księga Standardowych Zaklęć (1 stopień) - Miranda Goshawk
+Historia Magii - Bathilda Bagshot
+Teoria Magii - Adalbert Waffling
+Wprowadzenie do Transmutacji - Emeric Switch
+Tysiąc Magicznych Roślin i Grzybów - Phyllida Spore
+Magiczne Eliksiry i Napoje - Arsenius Jigger
+```
+
+W mailu do studentów wyślij numerowaną listę książek, jakie muszą nabyć przed początkiem roku akademickiego na ulicy.
+
+
+
 > ##### **TIP**
 >
 > W pętli `for` przypomnisz sobie `enumerate()` lub klasyczne iterowanie list.
 {: .block-tip }
+
+
+Użyj darmowego API `https://horoscope-app-api.vercel.app/` by wygenerować magiczną wróżbę, którą wyślesz emailem dla swoich uczniów.
+
 
 
 👉  Niedosyt? Pomyśl co możesz zrobić z dzisiaj nabytą wiedzą!
