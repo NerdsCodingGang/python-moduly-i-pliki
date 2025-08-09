@@ -258,6 +258,9 @@ Przepisać rozwiązanie tak, by uzywać wszystkiego co do tej pory umiemy na prz
 
 ### Rozszerzenie 
 
+
+#### Książki szkolne
+
 Utwórz nowy plik z listą książek 
 
 ```
@@ -272,16 +275,17 @@ Magiczne Eliksiry i Napoje - Arsenius Jigger
 W mailu do studentów wyślij numerowaną listę książek, jakie muszą nabyć przed początkiem roku akademickiego na ulicy.
 
 
-
 > ##### **TIP**
 >
 > W pętli `for` przypomnisz sobie `enumerate()` lub klasyczne iterowanie list.
 {: .block-tip }
 
 
-Użyj darmowego API `https://horoscope-app-api.vercel.app/` by wygenerować magiczną wróżbę, którą wyślesz emailem dla swoich uczniów.
+#### Wróżba na dzisiaj
 
+Użyj darmowego API `https://horoscope-app-api.vercel.app/` by wygenerować magiczną wróżbę, którą wyślesz emailem dla swoich uczniów.
 
 
 👉  Niedosyt? Pomyśl co możesz zrobić z dzisiaj nabytą wiedzą!
 
+👉  Napisz własne pomysły na rozszerzenia i podziel się ze swoim stolikiem
