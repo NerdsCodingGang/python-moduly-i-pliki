@@ -254,10 +254,14 @@ Przepisać rozwiązanie tak, by uzywać wszystkiego co do tej pory umiemy na prz
 - kod był podzielony na funkcje o nazwach mówiących, co robią (czasowniki: `read_people`, `read/render_template`, `build_email`, `main`),
 - warto podzielić kod na moduły (wprowadź chociaż 1 moduł np. czytanie pliku - reuzyjesz go dla ludzi jak i czytania szablonu)
 - pamiętaj by użyć `if __name__ == "__main__":` do uruchamiania programu
-
+- walidacja e‑maila jeśli email nie zawiera @, oznacz rekord jako „do poprawy” i pomiń go w wysyłce
 
 ### Rozszerzenie 
 
+- spersonalizuj emaile **Temat: List z Hogwartu dla {imie}**
+- przy wczytywaniu CSV przytnij spacje (`strip()`), ujednolić imiona (`title()`), puste e‑maile zamień na `brak emaila` i wyświetl w konsoli, że dla tego użytkownika zabrakło nam danych i nie da się mu wysłać maila! 
+- na koniec wypisz: `Wysłano: X, Pominięto: Y`. np. `Wysłano 12, Pominięto 2 emaile`
+-  pozwól użytkownikowi wybrać, ilu pierwszych odbiorców wysłać (np. „wyślij tylko 3 pierwsze”)
 
 #### Książki szkolne
 
